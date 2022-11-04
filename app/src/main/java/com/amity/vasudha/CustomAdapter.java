@@ -42,6 +42,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.myViewHold
             @Override
             public void onClick(View v) {
                 Snackbar.make(v,list.get(position).toString(), Snackbar.LENGTH_LONG).show();
+                Intent moveToInspection = new Intent(v.getContext(), MainActivity3.class);
+                v.getContext().startActivity(moveToInspection);
+
 
             }
         });
