@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.net.Inet4Address;
 import java.util.ArrayList;
-import android.content.Intent;
-import android.content.IntentFilter;
+import java.util.concurrent.TimeUnit;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.myViewHolder> {
 
@@ -43,7 +43,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.myViewHold
             public void onClick(View v) {
                 Snackbar.make(v,list.get(position).toString(), Snackbar.LENGTH_LONG).show();
                 Intent moveToInspection = new Intent(v.getContext(), MainActivity3.class);
+                moveToInspection.putExtra(list.get(position).toString(), "dataSendKey");
                 v.getContext().startActivity(moveToInspection);
+
 
 
             }
