@@ -19,7 +19,7 @@ public class MainActivity3 extends AppCompatActivity {
         if (extras != null) { value = extras.getString("dataSendKey"); }
         else { value = "nothing"; }
 
-        abc = findViewById(R.id.textViewlol);
+        abc = findViewById(R.id.t2);
         abc.setText(value);
 
 
